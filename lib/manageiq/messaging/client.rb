@@ -153,7 +153,7 @@ module ManageIQ
 
       def assert_options(options, keys)
         keys.each do |key|
-          raise "options must contain key #{key}" unless options.key?(key)
+          raise ArgumentError, "options must contain key #{key}" unless options.key?(key)
         end
       end
     end
